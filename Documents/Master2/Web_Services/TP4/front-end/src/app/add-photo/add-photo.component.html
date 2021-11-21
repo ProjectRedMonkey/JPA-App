@@ -1,0 +1,5 @@
+<form #f="ngForm">
+  Titre : <input type="text" name="nomPhoto" ngModel><br>
+  Auteur : <input type="text" name="auteur" ngModel><br>
+  <button type="button" (click) = add(f.value)>Valider</button>
+</form>

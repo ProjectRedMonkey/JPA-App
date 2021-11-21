@@ -1,0 +1,8 @@
+<div *ngIf="!print">Entrez l'id de la photo à modifier : <input type="number" id="id">
+  <button (click)="printForm()">Valider</button></div>
+
+<form #f="ngForm" *ngIf="print">
+  Titre : <input type="text" name="nomPhoto" [(ngModel)]="photo.nomPhoto"><br>
+  Auteur : <input type="text" name="auteur" [(ngModel)]="photo.auteur"><br>
+  <button (click)="modify(f.value)">Valider</button>
+</form>
